@@ -1,16 +1,16 @@
 import React from 'react';
 import TopBar from '../components/partials/TopBar';
 import Footer from '../components/partials/Footer';
-import '../styles/contact.css';
+import '../Styles/auth.css';
 
-const Contact = () => {
+const Register = () => {
   return (
     <div>
       <TopBar />
       <main>
-        <div className="contact-container">
-          <h1>Entre em Contato</h1>
-          <form id="contact-form">
+        <div className="register-container">
+          <h1>Cadastro</h1>
+          <form id="register-form">
             <div className="form-group">
               <label htmlFor="name">Nome:</label>
               <input type="text" id="name" name="name" required />
@@ -20,14 +20,14 @@ const Contact = () => {
               <input type="email" id="email" name="email" required />
             </div>
             <div className="form-group">
-              <label htmlFor="subject">Assunto:</label>
-              <input type="text" id="subject" name="subject" required />
+              <label htmlFor="password">Senha:</label>
+              <input type="password" id="password" name="password" required />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Mensagem:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <label htmlFor="confirm-password">Confirmar Senha:</label>
+              <input type="password" id="confirm-password" name="confirm-password" required />
             </div>
-            <button type="submit">Enviar</button>
+            <button type="submit">Cadastrar</button>
           </form>
         </div>
       </main>
@@ -36,4 +36,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Register;

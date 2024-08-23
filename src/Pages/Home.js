@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from '../components/partials/TopBar';
 import Footer from '../components/partials/Footer';
-import '../styles/styles.css';
+import '../Styles/styles.css';
 
 const Home = () => {
   return (
