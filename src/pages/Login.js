@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import TopBar from '../components/partials/TopBar';
+import TopBarSimplicity from '../components/partials/TopBarSimplicity';
 import Footer from '../components/partials/Footer';
 import '../styles/auth.css';
 
@@ -23,7 +23,7 @@ const Login = () => {
 
   return (
     <div>
-      <TopBar />
+      <TopBarSimplicity />
       <main>
         <div className="login-container">
           <h1>Login</h1>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { auth, db } from '../firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc } from 'firebase/firestore';
-import TopBar from '../components/partials/TopBar';
+import TopBarSimplicity from '../components/partials/TopBarSimplicity';
 import Footer from '../components/partials/Footer';
 import '../styles/auth.css';
 
@@ -34,7 +34,7 @@ const Register = () => {
 
   return (
     <div>
-      <TopBar />
+      <TopBarSimplicity />
       <main>
         <div className="register-container">
           <h1>Cadastro</h1>

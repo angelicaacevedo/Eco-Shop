@@ -1,12 +1,12 @@
 import React from 'react';
-import TopBar from '../components/partials/TopBar';
+import TopBarSimplicity from '../components/partials/TopBarSimplicity';
 import Footer from '../components/partials/Footer';
 import '../styles/contact.css';
 
 const Contact = () => {
   return (
     <div>
-      <TopBar />
+      <TopBarSimplicity />
       <main>
         <div className="contact-container">
           <h1>Entre em Contato</h1>

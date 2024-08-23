@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc, getDocs, deleteDoc, doc, serverTimestamp } from 'firebase/firestore';
-import TopBar from '../components/partials/TopBar';
+import TopBarSimplicity from '../components/partials/TopBarSimplicity';
 import Footer from '../components/partials/Footer';
 import '../styles/admin.css';
 
@@ -59,7 +59,7 @@ const Admin = () => {
 
   return (
     <div>
-      <TopBar />
+      <TopBarSimplicity />
       <main>
         <div className="admin-container">
           <h1>Painel do Administrador</h1>
