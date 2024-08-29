@@ -14,7 +14,13 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert('Login realizado com sucesso!');
-      window.location.href = '/';
+
+      // Verifica se o usuário é admin
+      if (email === 'admin@admin.com' && password === 'admin1234') {
+        window.location.href = '/admin';
+      } else {
+        window.location.href = '/';
+      }
     } catch (error) {
       console.error('Erro ao fazer login:', error);
       alert('Email ou senha incorretos.');

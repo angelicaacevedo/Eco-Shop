@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/topBar.css';
 
-const TopBar = () => (
+const TopBar = ({ cartTotal }) => (
   <div className="top-bar">
     <div className="container">
       <div className="top-row">
@@ -26,7 +26,7 @@ const TopBar = () => (
             <img src="Assets/carrinho.png" alt="Carrinho" className="icon" />
             <div className="cart-details">
               <span className="cart-label">Carrinho:</span>
-              <span className="cart-total">R$ 66,00</span>
+              <span className="cart-total">R$ {cartTotal}</span>
             </div>
           </div>
         </div>
