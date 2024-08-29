@@ -78,16 +78,20 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     flex-grow: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .search-bar button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     cursor: pointer;
     border-radius: 4px;
     flex-shrink: 0;
+    box-sizing: border-box;
+    width: 100px; /* Tamanho fixo para o botão */
 }
 
 .cart {

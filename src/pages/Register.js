@@ -33,7 +33,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div id="root">
       <TopBarSimplicity />
       <main>
         <div className="register-container">
@@ -57,6 +57,7 @@ const Register = () => {
             </div>
             <button type="submit">Cadastrar</button>
           </form>
+          <p>Já tem uma conta? <a href="/login">Faça Login</a></p>
         </div>
       </main>
       <Footer />

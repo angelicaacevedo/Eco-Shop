@@ -6,10 +6,17 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex:1;
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Faz o main ocupar o espaço disponível */
 }
 
 footer {
@@ -17,7 +24,7 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto;
+    margin-top: auto; /* Empurra o footer para o final da página */
 }
 
 footer p {

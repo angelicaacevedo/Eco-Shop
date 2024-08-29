@@ -5,7 +5,7 @@ import '../styles/contact.css';
 
 const Contact = () => {
   return (
-    <div>
+    <div id="root">
       <TopBarSimplicity />
       <main>
         <div className="contact-container">
@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label htmlFor="message">Mensagem:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <textarea id="message" name="message" rows="5" required style={{ marginTop: '5px', padding: '10px', border: '1px solid #ccc', borderRadius: '6px', boxSizing: 'border-box' }}></textarea>
             </div>
             <button type="submit">Enviar</button>
           </form>

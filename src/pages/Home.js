@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TopBar from '../components/partials/TopBar';
 import Footer from '../components/partials/Footer';
 import '../styles/home.css';
 
 const Home = () => {
+  useEffect(() => {
+    const productsContainer = document.getElementById('products-container');
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+
+    products.forEach(product => {
+      const productItem = document.createElement('div');
+      productItem.className = 'product';
+      productItem.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <p>R$${product.price.toFixed(2)}</p>
+          <div class="rating">★★★★☆</div>
+        </div>
+      `;
+      productsContainer.appendChild(productItem);
+    });
+  }, []);
+
   return (
-    <div>
+    <div id="root">
       <TopBar />
       <main>
         <section className="apresentacao">
@@ -47,7 +66,7 @@ const Home = () => {
             <a href="#">Ver todos →</a>
           </div>
           <div className="products" id="products-container">
-            {/* Aqui você pode mapear os produtos populares */}
+            {/* Os produtos serão carregados aqui */}
           </div>
         </section>
       </main>

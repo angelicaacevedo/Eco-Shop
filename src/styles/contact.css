@@ -6,7 +6,7 @@ body {
 }
 
 .contact-container {
-    max-width: 600px;
+    width: 50%;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
@@ -28,13 +28,19 @@ body {
     margin-bottom: 5px;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input, .form-group textarea {
     width: 100%;
-    padding: 15px;
+    padding: 10px; /* Reduz o padding para inputs e textarea */
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
+    margin: 0; /* Remove qualquer margem extra */
+}
+
+.form-group textarea {
+    width: 100%;
+    margin-top: 5px; /* Ajusta o espaçamento específico para textarea */
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 button[type="submit"] {
