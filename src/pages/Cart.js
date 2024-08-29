@@ -5,7 +5,7 @@ import '../styles/cart.css';
 
 const Cart = () => {
   return (
-    <div>
+    <div id="root">
       <TopBar />
       <main>
         <section className="cart">

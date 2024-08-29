@@ -5,7 +5,7 @@ import '../styles/supermarket.css';
 
 const Supermarket = () => {
   return (
-    <div>
+    <div id="root">
       <TopBar />
       <main>
         <section className="filter-category">
