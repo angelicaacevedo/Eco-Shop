@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="container">
         <p>Desenvolvido por Angélica Acevedo Lima e Gustavo Batista</p>
-        <p>Licença: Estudantes IFSP</p>
+        <p> Licenciamento do SW</p>
       </div>
     </footer>
   );
