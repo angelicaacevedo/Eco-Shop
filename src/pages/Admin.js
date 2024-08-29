@@ -14,37 +14,46 @@ const Admin = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const querySnapshot = await getDocs(collection(db, 'Produtos'));
-      const productsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setProducts(productsList);
+        const querySnapshot = await getDocs(collection(db, 'Produtos'));
+        const productsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setProducts(productsList);
+
+        // Salvar os produtos no localStorage
+        localStorage.setItem('products', JSON.stringify(productsList));
     };
 
     fetchProducts();
-  }, []);
+}, []);
 
   const handleAddProduct = async (e) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, 'Produtos'), {
-        name: productName,
-        price: parseFloat(productPrice),
-        category: productCategory,
-        image: productImage,
-        createdAt: serverTimestamp()
-      });
-      alert('Produto cadastrado com sucesso!');
-      setProductName('');
-      setProductPrice('');
-      setProductCategory('');
-      setProductImage('');
-      const querySnapshot = await getDocs(collection(db, 'Produtos'));
-      const productsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setProducts(productsList);
+        const newProduct = {
+            name: productName,
+            price: parseFloat(productPrice),
+            category: productCategory,
+            image: productImage,
+            createdAt: serverTimestamp()
+        };
+        await addDoc(collection(db, 'Produtos'), newProduct);
+        alert('Produto cadastrado com sucesso!');
+        
+        // Limpar os campos
+        setProductName('');
+        setProductPrice('');
+        setProductCategory('');
+        setProductImage('');
+        
+        // Atualizar a lista de produtos no localStorage
+        const productsList = [...products, newProduct];
+        localStorage.setItem('products', JSON.stringify(productsList));
+        setProducts(productsList);
     } catch (error) {
-      console.error('Erro ao cadastrar produto:', error);
-      alert('Erro ao cadastrar produto.');
+        console.error('Erro ao cadastrar produto:', error);
+        alert('Erro ao cadastrar produto.');
     }
-  };
+};
+
 
   const handleDeleteProduct = async (id) => {
     try {

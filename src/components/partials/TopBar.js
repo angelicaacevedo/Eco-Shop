@@ -14,7 +14,7 @@ const TopBar = ({ cartTotal }) => (
       </div>
       <div className="bottom-row">
         <div className="logo">
-          <img src="Assets/logo.jpg" alt="EcoShop" />
+          <img src="assets/logo.jpg" alt="EcoShop" />
           <span>EcoShop</span>
         </div>
         <div className="search-bar">
@@ -23,7 +23,7 @@ const TopBar = ({ cartTotal }) => (
         </div>
         <div className="cart">
           <div className="cart-info">
-            <img src="Assets/carrinho.png" alt="Carrinho" className="icon" />
+            <img src="assets/carrinho.png" alt="Carrinho" className="icon" />
             <div className="cart-details">
               <span className="cart-label">Carrinho:</span>
               <span className="cart-total">R$ {cartTotal}</span>
